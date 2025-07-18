@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Colaboraciones - Almighty</title>
+  <link rel="stylesheet" href="../CSS/collab.css" />
+</head>
+<body>
+  <header class="topbar">
+    <img src="../Assets/logo.png" alt="Logo de Almighty" class="logo" />
+    <h1 class="nombre">Colaboraciones</h1>
+  </header>
+
+  <section class="intro animated">
+    <h2>El poder de la unión musical</h2>
+    <p>Almighty ha trabajado con numerosos artistas a lo largo de su carrera, dejando huella en la escena del género urbano tanto en su etapa secular como cristiana. Esta sección explora sus colaboraciones más impactantes y lo que han significado en su evolución artística.</p>
+  </section>
+
+  <section class="colaboraciones-list animated">
+    <div class="colaboracion">
+      <img src="../Assets/farruko.png" alt="Farruko y Almighty" />
+      <div class="contenido">
+        <h3>Farruko - "Voy a Beber" (Remix)</h3>
+        <p>Una de las primeras colaboraciones que dieron a conocer a Almighty en el panorama urbano. Su versatilidad y potencia vocal llamaron la atención del público.</p>
+      </div>
+    </div>
+    <div class="colaboracion">
+      <img src="../Assets/badbunny.png" alt="Bad Bunny y Almighty" />
+      <div class="contenido">
+        <h3>Bad Bunny - "Toda (Remix)"</h3>
+        <p>Junto a figuras como Bad Bunny y Myke Towers, Almighty se posicionó como uno de los mejores liricistas en el remix de este éxito.</p>
+      </div>
+    </div>
+    <div class="colaboracion">
+      <img src="../Assets/redimi2.png" alt="Redimi2 y Almighty" />
+      <div class="contenido">
+        <h3>Redimi2 - "Filipenses 1:6"</h3>
+        <p>En su etapa cristiana, Almighty colaboró con Redimi2, dando un poderoso mensaje de fe y esperanza, consolidando su nuevo enfoque musical.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section animated">
+    <h2>Colaboraciones más destacadas</h2>
+    <div class="videos">
+      <iframe src="https://www.youtube.com/embed/YOUTUBE_ID1" title="Colaboración 1" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/YOUTUBE_ID2" title="Colaboración 2" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/YOUTUBE_ID3" title="Colaboración 3" allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Almighty Fanpage. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const animated = document.querySelectorAll('.animated');
+    window.addEventListener('scroll', () => {
+      animated.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        const winHeight = window.innerHeight;
+        if (pos < winHeight - 100) el.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>

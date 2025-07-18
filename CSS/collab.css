@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d;
+  color: #f0f0f0;
+  scroll-behavior: smooth;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #222;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nombre {
+  font-size: 1.8rem;
+  color: #ff4da6;
+}
+
+.intro {
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+}
+
+.intro h2 {
+  font-size: 2.5rem;
+  color: #ffd700;
+}
+
+.colaboraciones-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.colaboracion {
+  display: flex;
+  gap: 2rem;
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+.colaboracion img {
+  width: 250px;
+  object-fit: cover;
+}
+
+.colaboracion .contenido {
+  padding: 1.5rem;
+}
+
+.colaboracion h3 {
+  margin-top: 0;
+  color: #00ffff;
+}
+
+.video-section {
+  padding: 4rem 2rem;
+  background-color: #141414;
+  text-align: center;
+}
+
+.video-section h2 {
+  color: #ffcc00;
+  margin-bottom: 2rem;
+}
+
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.videos iframe {
+  width: 320px;
+  height: 180px;
+  border: none;
+  border-radius: 10px;
+}
+
+.footer {
+  background-color: #0a0a0a;
+  text-align: center;
+  padding: 1rem;
+  border-top: 1px solid #222;
+  color: #aaa;
+}
+
+.animated {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease-in-out;
+}
+
+.animated.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

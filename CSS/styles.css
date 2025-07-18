@@ -69,8 +69,8 @@ body {
 
 .imagen-texto img {
   width: 100%;
-  max-width: 400px;        /* 👈 TAMAÑO MÁXIMO */
-  max-height: 300px;       /* 👈 TAMAÑO MÁXIMO */
+  max-width: 400px;        
+  max-height: 300px;      
   object-fit: cover;
   border-radius: 10px;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.05);
