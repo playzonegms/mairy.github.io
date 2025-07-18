@@ -12,17 +12,17 @@
     <h1 class="nombre">Almighty</h1>
   </header>
 
-  <section class="biografia">
+  <section class="biografia animated">
     <h2>Biografía de Almighty</h2>
     <p>
-      Almighty, cuyo nombre real es Alejandro Mosqueda Paz, es un artista urbano nacido en Cuba y criado en Puerto Rico. Desde temprana edad mostró un interés por la música y rápidamente se destacó en el género del trap latino.
+      Almighty, cuyo nombre real es Alejandro Mosqueda Paz, es un artista urbano nacido en Cuba y criado en Puerto Rico...
     </p>
     <p>
-      Su carrera despegó con colaboraciones explosivas y un estilo lírico agresivo. Sin embargo, su historia tomó un giro cuando decidió cambiar su vida y su música hacia un mensaje cristiano, convirtiéndose en una figura única y controversial dentro del género.
+      Su carrera despegó con colaboraciones explosivas y un estilo lírico agresivo...
     </p>
   </section>
 
-  <section class="imagenes-dobles">
+  <section class="imagenes-dobles animated">
     <div class="imagen-texto">
       <p>Almighty en sus inicios como artista secular</p>
       <img src="almighty1.jpg" alt="Almighty joven" />
@@ -33,32 +33,37 @@
     </div>
   </section>
 
-  <section class="texto-largo">
+  <section class="texto-largo animated">
     <p>
-      La transformación de Almighty ha sido tema de debate tanto entre sus seguidores como en los medios de comunicación. Su decisión de alejarse de la música comercial para dedicarse al evangelio ha impactado profundamente a su audiencia. Además de su talento musical, Almighty también ha sido un portavoz abierto sobre su salud mental, sus luchas personales y su redención espiritual. Su legado continúa desarrollándose como un ejemplo de cambio, fe y perseverancia.
+      La transformación de Almighty ha sido tema de debate tanto entre sus seguidores como en los medios...
     </p>
   </section>
 
-  <section class="botones-galeria">
+  <section class="botones-galeria animated">
     <div class="fila fila-1">
-      <div class="boton-imagen" style="background-image: url('boton1.jpg')">
-        <span>Primeros éxitos</span>
-      </div>
-      <div class="boton-imagen" style="background-image: url('boton2.jpg')">
-        <span>Colaboraciones</span>
-      </div>
-      <div class="boton-imagen" style="background-image: url('boton3.jpg')">
-        <span>Cambio de rumbo</span>
-      </div>
+      <div class="boton-imagen" style="background-image: url('boton1.jpg')"><span>Primeros éxitos</span></div>
+      <div class="boton-imagen" style="background-image: url('boton2.jpg')"><span>Colaboraciones</span></div>
+      <div class="boton-imagen" style="background-image: url('boton3.jpg')"><span>Cambio de rumbo</span></div>
     </div>
     <div class="fila fila-2">
-      <div class="boton-imagen" style="background-image: url('boton4.jpg')">
-        <span>Vida personal</span>
-      </div>
-      <div class="boton-imagen" style="background-image: url('boton5.jpg')">
-        <span>Discografía</span>
-      </div>
+      <div class="boton-imagen" style="background-image: url('boton4.jpg')"><span>Vida personal</span></div>
+      <div class="boton-imagen" style="background-image: url('boton5.jpg')"><span>Discografía</span></div>
     </div>
   </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Almighty Fanpage. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const animated = document.querySelectorAll('.animated');
+    window.addEventListener('scroll', () => {
+      animated.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        const winHeight = window.innerHeight;
+        if (pos < winHeight - 100) el.classList.add('visible');
+      });
+    });
+  </script>
 </body>
 </html>
