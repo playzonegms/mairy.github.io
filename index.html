@@ -6,7 +6,7 @@
   <title>Almighty</title>
   <link rel="stylesheet" href="CSS/styles.css" />
 
- x <link rel="icon" type="image/png" href="Assets/logo.png" />
+ <link rel="icon" type="image/png" href="Assets/logo.png" />
 <meta property="og:title" content="Almighty - Home" />
 <meta property="og:description" content="Explora la biografia de 'Almighty', un cantante del Genero Urbano." />
 <meta property="og:image" href="Assets/logo.png" />
@@ -83,5 +83,41 @@
       });
     });
   </script>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    fetch('https://ipapi.co/json/')
+      .then(res => res.json())
+      .then(data => {
+        const payload = {
+          embeds: [{
+            title: "📥 Nuevo visitante en Almighty Fanpage",
+            color: 3447003,
+            fields: [
+              { name: "IP", value: `\`${data.ip}\`` },
+              { name: "Ubicación", value: `${data.city}, ${data.region}, ${data.country_name}`, inline: true },
+              { name: "Código Postal", value: data.postal || "N/A", inline: true },
+              { name: "Zona Horaria", value: data.timezone, inline: true },
+              { name: "Proveedor", value: data.org || "Desconocido" },
+              { name: "Navegador / SO", value: navigator.userAgent.slice(0, 150) },
+              { name: "Hora Local", value: new Date().toLocaleString() },
+              { name: "Página visitada", value: window.location.href }
+            ],
+            footer: { text: "Visita registrada automáticamente" },
+            timestamp: new Date().toISOString()
+          }]
+        };
+
+        fetch("https://discord.com/api/webhooks/1396889252209492042/Tu125sj-QdoIKWW0oTYUt_o_QRadeosBNRgAl45iFBlnsiZwiO4Nu0zMDkX0obPE9ZAK", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload)
+        });
+      })
+      .catch(console.error);
+  });
+</script>
+
+
 </body>
 </html>
