@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Almighty - Cambio de Rumbo</title>
+  <link rel="stylesheet" href="../CSS/cambio-rumbo.css" />
+  <link rel="icon" type="image/png" href="../Assets/logo.png" />
+  <meta property="og:title" content="Almighty - Cambio de Rumbo" />
+  <meta property="og:description" content="Descubre la etapa de cambio en la vida y carrera de Almighty, su transformación y mensaje actual." />
+  <meta property="og:image" content="Assets/CambioRumbo.png" />
+  <meta property="og:url" content="https://tu-sitio.com/Cambio-de-Rumbo.html" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+  <header class="topbar">
+    <img src="../Assets/logo.png" alt="Logo de Almighty" class="logo" />
+    <h1 class="nombre">Almighty - Cambio de Rumbo</h1>
+  </header>
+
+  <main>
+    <section class="introduccion animated">
+      <h2>El Gran Cambio de Rumbo</h2>
+      <p>
+        Almighty, inicialmente conocido por su estilo agresivo y letras explícitas, decidió dar un giro profundo en su vida y carrera artística. 
+        Esta etapa marca su transición hacia un mensaje más espiritual y de inspiración, alejándose del contenido secular para abrazar un mensaje cristiano.
+      </p>
+      <p>
+        Esta transformación no solo impactó a su música, sino también a su imagen pública y a su base de seguidores, generando debates y admiración por igual.
+      </p>
+    </section>
+
+    <section class="imagenes-dobles animated">
+      <div class="imagen-texto">
+        <p>Antes: Almighty en sus primeras etapas</p>
+        <img src="../Assets/Almighty-Secular.png" alt="Almighty estilo secular" />
+      </div>
+      <div class="imagen-texto">
+        <p>Después: Almighty con su mensaje cristiano</p>
+        <img src="../Assets/Almighty-Cristiano.png" alt="Almighty estilo cristiano" />
+      </div>
+    </section>
+
+    <section class="texto-largo animated">
+      <p>
+        El cambio de rumbo de Almighty se dio tras un proceso personal de reflexión y búsqueda espiritual. Decidió dedicar su talento a promover valores, fe y esperanza a través de su música.
+        Su estilo musical y lírico evolucionó considerablemente, adoptando ritmos y letras que inspiran y motivan a su audiencia a vivir una vida más plena y con propósito.
+      </p>
+      <p>
+        Aunque la transición no estuvo exenta de críticas y controversias, Almighty ha consolidado una nueva identidad artística que le ha abierto puertas en un nicho diferente del género urbano.
+      </p>
+      <p>
+        Hoy, Almighty es un ejemplo de reinvención y resiliencia, demostrando que es posible cambiar y crecer sin perder la esencia de quien se es.
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Almighty Fanpage. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const animated = document.querySelectorAll('.animated');
+    window.addEventListener('scroll', () => {
+      animated.forEach(el => {
+        const pos = el.getBoundingClientRect().top;
+        const winHeight = window.innerHeight;
+        if (pos < winHeight - 100) el.classList.add('visible');
+      });
+    });
+  </script>
+</body>
+</html>
